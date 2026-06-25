@@ -10,6 +10,9 @@ app.use(express.json());
 const authroutes = require("./routes/authroutes");
 
 app.use("/api/auth", authroutes);
+const productRoutes = require("./routes/productRoutes");
+
+app.use("/api/products", productRoutes);
 
 
 mongoose.connect(process.env.MONGO_URI)
